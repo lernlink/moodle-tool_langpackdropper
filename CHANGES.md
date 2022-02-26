@@ -5,6 +5,7 @@ Changes
 -------
 ### Unreleased
 
+* 2022-02-26 - Raise minimum Moodle Core version to cover MDL-73588 - Thanks to David Mudrák!
 * 2022-02-26 - Small langugae pack pack fix.
 
 ### v3.9-r1

@@ -27,6 +27,6 @@
 $plugin->component = 'tool_langpackdropper';
 $plugin->version = 2022012902;
 $plugin->release = 'v3.9-r1';
-$plugin->requires = 2020061500;
+$plugin->requires = 2020061512.02;
 $plugin->supported = [39, 39];
 $plugin->maturity = MATURITY_STABLE;
