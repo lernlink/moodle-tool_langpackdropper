@@ -9,7 +9,7 @@ Moodle admin tool to download and update language packs which are not located / 
 Requirements
 ------------
 
-This plugin requires Moodle 3.9+
+This plugin requires Moodle 3.10+
 
 
 Motivation for this plugin
