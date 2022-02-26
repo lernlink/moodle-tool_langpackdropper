@@ -48,7 +48,7 @@ Please note:
 <ul>
 <li>Configuration lines which appear invalid, e.g. if they contain an invalid URL, will be silently ignored when the settings are processed.</li>
 <li>The language pack ZIP file is expected to either contain all language pack files on its top level folder or to contain one single folder where all language pack files are located. In the second case, the folder can have any name. If the ZIP file does not match these requirements, the language pack will not be processed and an error will be logged.</li>
-<li>With this tool, Moodle will download PHP code from the given URL and will execute its content as language pack PHP files. <em>It\'s your duty as administrator to only configure download URLs from which you are 100% sure that they do not contain anything else than language pack files or that an attacker can infiltrate malicious code into the ZIP file anytime in the future.</em></li>
+<li>With this tool, Moodle will download PHP code from the given URL and will execute its content as language pack PHP files. <em>It\'s your duty as administrator to only configure download URLs from which you are 100% sure that they do not contain anything else than language pack files and that an attacker cannot infiltrate malicious code into the ZIP file anytime in the future.</em></li>
 <li>If you plan to use this tool to drop a language pack with an identifier which is also managed in AMOS - which is perfectly possible - please evaluate if you have to disable the \\tool_langimport\\task\\update_langpacks_task scheduled task to avoid any interference of both language pack updating mechanisms.</li>
 </ul>';
 $string['taskupdatelanguagepacks'] = 'Update dropped language packs';
