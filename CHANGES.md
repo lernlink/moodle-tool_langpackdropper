@@ -3,7 +3,7 @@ moodle-tool_langpackdropper
 
 Changes
 -------
-### Unreleased
+### v3.9-r2
 
 * 2022-02-26 - Raise minimum Moodle Core version to cover MDL-73588 - Thanks to David Mudrák!
 * 2022-02-26 - Small langugae pack pack fix.
