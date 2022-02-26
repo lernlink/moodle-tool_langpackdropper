@@ -4,6 +4,10 @@ moodle-tool_langpackdropper
 Changes
 -------
 
+### Unreleased
+
+* 2022-02-27 - Prepare compatibility for Moodle 3.11.
+
 ### v3.10-r1
 
 * 2022-02-26 - Prepare compatibility for Moodle 3.10.
