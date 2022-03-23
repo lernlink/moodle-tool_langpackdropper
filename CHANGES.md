@@ -4,7 +4,7 @@ moodle-tool_langpackdropper
 Changes
 -------
 
-### Unreleased
+### v3.9-r3
 
 * 2022-03-23 - Improve plugin and admin setting descriptions - Thanks to Ralf Krause!
 
