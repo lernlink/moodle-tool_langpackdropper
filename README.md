@@ -15,9 +15,9 @@ This plugin requires Moodle 3.10+
 Motivation for this plugin
 --------------------------
 
-With this plugin, you are able to download language packs which are not located / maintained in AMOS, the central Moodle translation system. 
+With this plugin, you are able to download language packs which are not part of the official Moodle language pack (which means that they are not maintained in AMOS, the central Moodle translation system).
 
-This is especially relevant if you are running a large number of language string modifications and want to manage these rather in Git than in the Moodle language customization GUI. 
+This is especially relevant if you are running a large number of language string modifications and want to manage these on your own code management server rather than in the language customization interface of your particular Moodle instance.
 This is also relevant if you want to run the same language string modifications on multiple Moodle instances simultaneously.
 
 
@@ -52,7 +52,7 @@ Moodle will try to download the language pack(s) from the given URL(s) until thi
 Security implications
 ---------------------
 
-With this tool, Moodle will download PHP code from the given URL and will execute its content as language pack PHP files. It's your duty as administrator to only configure download URLs from which you are 100% sure that they do not contain anything else than language pack files or that an attacker can infiltrate malicious code into the ZIP file anytime in the future.
+With this tool, Moodle will download PHP code from the given URL and will execute its content as language pack PHP files. The Moodle administrator has to make sure to only configure download URLs which do not contain anything else than language pack files. Additionally, the Moodle administrator has to make sure that an attacker cannot infiltrate malicious code into the ZIP file anytime in the future.
 
 
 Theme support
