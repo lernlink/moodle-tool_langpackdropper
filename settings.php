@@ -40,9 +40,11 @@ if ($hassiteconfig) {
         $settings->add($setting);
 
         // Create language pack urls widget.
+        $manageurl = new moodle_url('/admin/tool/langimport/index.php');
         $setting = new admin_setting_configtextarea('tool_langpackdropper/langpackurls',
                 get_string('setting_langpackurls', 'tool_langpackdropper', null, true),
-                get_string('setting_langpackurls_desc', 'tool_langpackdropper', null, true), '', PARAM_RAW);
+                get_string('setting_langpackurls_desc', 'tool_langpackdropper', array('managepage' => $manageurl->out()), true),
+                        '', PARAM_RAW);
         $setting->set_updatedcallback('tool_langpackdropper_updatecallback');
         $settings->add($setting);
 
