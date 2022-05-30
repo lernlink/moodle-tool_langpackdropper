@@ -4,6 +4,10 @@ moodle-tool_langpackdropper
 Changes
 -------
 
+### Unreleased
+
+* 2022-05-03 - Improvement: Add note that language packs will not be removed again
+
 ### v3.11-r2
 
 * 2022-03-23 - Improve plugin and admin setting descriptions - Thanks to Ralf Krause!
