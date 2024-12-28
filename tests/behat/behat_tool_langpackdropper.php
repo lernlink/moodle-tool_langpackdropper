@@ -37,7 +37,7 @@ require_once(__DIR__.'/../../../../../lib/tests/behat/behat_forms.php');
  * @copyright 2022 Alexander Bias, lern.link GmbH <alexander.bias@lernlink.de>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class behat_tool_langpackdropper extends behat_forms {
+class behat_tool_langpackdropper extends behat_base {
     // @codingStandardsIgnoreStart
     /**
      * Sets a language pack URL setting.
