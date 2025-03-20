@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2025-03-20 - Make codechecker happy again.
 * 2025-03-20 - Upgrade: Make the scheduled task non-blocking as this has been deprecated in Moodle core.
 * 2025-03-20 - Add sections about capabilities and scheduled task to README.md
 * 2025-03-20 - Add UPGRADE.md

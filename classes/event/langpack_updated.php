@@ -56,7 +56,9 @@ class langpack_updated extends \core\event\base {
      * @return string
      */
     public function get_description() {
-        return get_string('eventlangpackupdated_desc', 'tool_langpackdropper', array('name' => $this->other['name'],
-                'url' => $this->other['url']));
+        return get_string('eventlangpackupdated_desc', 'tool_langpackdropper', [
+            'name' => $this->other['name'],
+            'url' => $this->other['url'],
+        ]);
     }
 }
