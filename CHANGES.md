@@ -6,6 +6,8 @@ Changes
 
 ### Unreleased
 
+* 2025-03-20 - Upgrade: Fix Behat tests which broke on 4.1.
+* 2025-03-20 - Tests: Fix the language pack update Behat Scenario, resolves #1.
 * 2025-03-20 - Make codechecker happy again.
 * 2025-03-20 - Upgrade: Make the scheduled task non-blocking as this has been deprecated in Moodle core.
 * 2025-03-20 - Add sections about capabilities and scheduled task to README.md
