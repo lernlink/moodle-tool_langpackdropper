@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2025-03-20 - Updated Moodle Plugin CI to latest upstream recommendations
 * 2025-03-20 - Prepare compatibility for Moodle 4.1.
 
 ### v3.11-r3
