@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 $tasks = array(
     array(
         'classname' => 'tool_langpackdropper\task\update_language_packs',
-        'blocking' => 1,
+        'blocking' => 0,
         'minute' => '0',
         'hour' => '1',
         'day' => '*',
