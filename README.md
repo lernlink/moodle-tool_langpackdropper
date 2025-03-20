@@ -49,6 +49,23 @@ This setting expects a list of language packs to be used on this Moodle installa
 Moodle will try to download the language pack(s) from the given URL(s) until this timeout is hit.
 
 
+Capabilities
+------------
+
+This plugin does not add any additional capabilities.
+
+
+Scheduled Tasks
+---------------
+
+This plugin also introduces these additional scheduled tasks:
+
+### \tool_langpackdropper\task\update_language_packs
+
+This task is responsible for downloading and dropping the language packs, i.e. it is the main purpose of the plugin.\
+By default, the task is enabled and runs daily at 1am.
+
+
 Security implications
 ---------------------
 

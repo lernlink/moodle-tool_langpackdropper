@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2025-03-20 - Add sections about capabilities and scheduled task to README.md
 * 2025-03-20 - Add UPGRADE.md
 * 2025-03-20 - Add automated release to moodle.org/plugins
 * 2025-03-20 - Updated Moodle Plugin CI to latest upstream recommendations
