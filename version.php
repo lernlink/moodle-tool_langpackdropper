@@ -27,6 +27,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'tool_langpackdropper';
 $plugin->version = 2022022702;
 $plugin->release = 'v3.11-r3';
-$plugin->requires = 2021051705.03;
-$plugin->supported = [311, 311];
+$plugin->requires = 2022112800;
+$plugin->supported = [401, 401];
 $plugin->maturity = MATURITY_STABLE;
