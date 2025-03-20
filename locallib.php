@@ -90,24 +90,24 @@ function tool_langpackdropper_handle_langpacks() {
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_INSTALLED:
                     mtrace ('... SUCCESS: The language pack was installed.');
-                    $logevent = \tool_langpackdropper\event\langpack_installed::create(array(
-                            'context' => context_system::instance(),
-                            'other' => array(
-                                    'name' => $name,
-                                    'url' => $url
-                            )
-                    ));
+                    $logevent = \tool_langpackdropper\event\langpack_installed::create([
+                        'context' => context_system::instance(),
+                        'other' => [
+                            'name' => $name,
+                            'url' => $url,
+                        ],
+                    ]);
                     $logevent->trigger();
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_UPDATED:
                     mtrace ('... SUCCESS: The language pack was updated.');
-                    $logevent = \tool_langpackdropper\event\langpack_updated::create(array(
-                            'context' => context_system::instance(),
-                            'other' => array(
-                                    'name' => $name,
-                                    'url' => $url
-                            )
-                    ));
+                    $logevent = \tool_langpackdropper\event\langpack_updated::create([
+                        'context' => context_system::instance(),
+                        'other' => [
+                            'name' => $name,
+                            'url' => $url,
+                        ],
+                    ]);
                     $logevent->trigger();
                     break;
             }
@@ -127,7 +127,7 @@ function tool_langpackdropper_handle_langpacks() {
  */
 function tool_langpackdropper_parse_langpack_urls() {
     // Initialize array to return at the end.
-    $urls = array();
+    $urls = [];
 
     // Get admin setting.
     $config = get_config('tool_langpackdropper', 'langpackurls');
@@ -211,7 +211,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
     $timeout = get_config('downloadtimeout', 'tool_langpackdropper');
 
     // Download langpack.
-    $curlresult = $curl->download_one($url, null, array('filepath' => $dlpath, 'followlocation' => true, 'timeout' => $timeout));
+    $curlresult = $curl->download_one($url, null, ['filepath' => $dlpath, 'followlocation' => true, 'timeout' => $timeout]);
 
     // If the download was not successful.
     if ($curlresult !== true) {

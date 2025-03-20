@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$tasks = array(
-    array(
+$tasks = [
+    [
         'classname' => 'tool_langpackdropper\task\update_language_packs',
         'blocking' => 0,
         'minute' => '0',
@@ -33,6 +33,6 @@ $tasks = array(
         'day' => '*',
         'dayofweek' => '*',
         'month' => '*',
-        'disabled' => 0
-    ),
-);
+        'disabled' => 0,
+    ],
+];
