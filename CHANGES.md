@@ -4,7 +4,7 @@ moodle-tool_langpackdropper
 Changes
 -------
 
-### Unreleased
+### v4.1-r1
 
 * 2025-03-20 - Upgrade: Fix Behat tests which broke on 4.1.
 * 2025-03-20 - Tests: Fix the language pack update Behat Scenario, resolves #1.
