@@ -4,7 +4,7 @@ moodle-tool_langpackdropper
 Changes
 -------
 
-### Unreleased
+### v4.5-r1
 
 * 2025-03-23 - Development: Rename master branch to main, please update your clones.
 * 2025-03-23 - Upgrade: Adopt changes from MDL-81960 and MDL-82183 and use new classes.
