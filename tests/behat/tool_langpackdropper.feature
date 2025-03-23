@@ -21,7 +21,7 @@ Feature: The language pack dropper tool allows admins to use non-AMOS language p
 
   Scenario: Configure a new (top level structured) language pack in the plugin settings and have it downloaded with the ad-hoc task
     And I navigate to "Language > Language pack dropper" in site administration
-    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/master/tests/fixtures/de_droppertest_toplevel.zip"
+    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/main/tests/fixtures/de_droppertest_toplevel.zip"
     And I press "Save changes"
     And I should see "The language pack URLs were updated"
     And I run all adhoc tasks
@@ -41,7 +41,7 @@ Feature: The language pack dropper tool allows admins to use non-AMOS language p
 
   Scenario: Configure a new (top level structured) language pack in the plugin settings and have it downloaded with the scheduled task
     And I navigate to "Language > Language pack dropper" in site administration
-    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/master/tests/fixtures/de_droppertest_toplevel.zip"
+    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/main/tests/fixtures/de_droppertest_toplevel.zip"
     And I press "Save changes"
     And I should see "The language pack URLs were updated"
     # I do not run ad-hoc tasks by purpose now so that the langpack is not installed by the ad-hoc task
@@ -62,7 +62,7 @@ Feature: The language pack dropper tool allows admins to use non-AMOS language p
 
   Scenario: Configure a new (subdirectory / Github structured) language pack in the plugin settings and have it downloaded with the ad-hoc task
     And I navigate to "Language > Language pack dropper" in site administration
-    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/master/tests/fixtures/de_droppertest_toplevel.zip"
+    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/main/tests/fixtures/de_droppertest_toplevel.zip"
     And I press "Save changes"
     And I should see "The language pack URLs were updated"
     And I run all adhoc tasks
@@ -82,7 +82,7 @@ Feature: The language pack dropper tool allows admins to use non-AMOS language p
 
   Scenario: Configure a new (top level structured) language pack in the plugin settings, have it downloaded with the ad-hoc task and have it updated later with the scheduled task
     And I navigate to "Language > Language pack dropper" in site administration
-    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/master/tests/fixtures/de_droppertest_toplevel.zip"
+    And I set the field "Language pack URLs" to "de_droppertest|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/main/tests/fixtures/de_droppertest_toplevel.zip"
     And I press "Save changes"
     And I should see "The language pack URLs were updated"
     And I run all adhoc tasks
@@ -90,7 +90,7 @@ Feature: The language pack dropper tool allows admins to use non-AMOS language p
     And the "Installed language packs" select box should contain "de_droppertest"
     # Now, we change the langpack URL in the background to simulate a regular upstream update of the language pack which is then detected by the scheduled task.
     And the following config values are set as admin:
-      | langpackurls | de_droppertest\|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/master/tests/fixtures/de_droppertest_toplevel_updated.zip | tool_langpackdropper |
+      | langpackurls | de_droppertest\|https://github.com/lernlink/moodle-tool_langpackdropper/raw/refs/heads/main/tests/fixtures/de_droppertest_toplevel_updated.zip | tool_langpackdropper |
     And I run the scheduled task "tool_langpackdropper\task\update_language_packs"
     And I navigate to "Language > Language packs" in site administration
     And the "Installed language packs" select box should contain "de_droppertest"
