@@ -385,10 +385,13 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
  * Helper function which acts as update callback after the admin setting is stored.
  */
 function tool_langpackdropper_updatecallback() {
-    // Trigger the ad-hoc task.
-    $task = new \tool_langpackdropper\task\drop_language_packs();
-    $result = \core\task\manager::queue_adhoc_task($task);
+    // If a language pack drop is configured.
+    if (!empty(get_config('tool_langpackdropper', 'langpackurls'))) {
+        // Trigger the ad-hoc task.
+        $task = new \tool_langpackdropper\task\drop_language_packs();
+        $result = \core\task\manager::queue_adhoc_task($task);
 
-    // Trigger a notification on the settings page.
-    \core\notification::success(get_string('updatedcallbacknotification', 'tool_langpackdropper'));
+        // Trigger a notification on the settings page.
+        \core\notification::success(get_string('updatedcallbacknotification', 'tool_langpackdropper'));
+    }
 }

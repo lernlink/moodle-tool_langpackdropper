@@ -6,6 +6,7 @@ Changes
 
 ### Unreleased
 
+* 2025-03-22 - Improvement: Show the "The language pack URLs were updated." notification only if needed, resolves #2.
 * 2025-03-22 - Prepare compatibility for Moodle 4.4.
 
 ### v4.3-r1
