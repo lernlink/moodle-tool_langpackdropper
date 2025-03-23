@@ -1,7 +1,7 @@
 moodle-tool_langpackdropper
 ===========================
 
-[![Moodle Plugin CI](https://github.com/lernlink/moodle-tool_langpackdropper/workflows/Moodle%20Plugin%20CI/badge.svg?branch=main)](https://github.com/lernlink/moodle-tool_langpackdropper/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amain)
+[![Moodle Plugin CI](https://github.com/lernlink/moodle-tool_langpackdropper/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=main)](https://github.com/lernlink/moodle-tool_langpackdropper/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amain)
 
 Moodle admin tool to download and update language packs which are not located / maintained in AMOS.
 
