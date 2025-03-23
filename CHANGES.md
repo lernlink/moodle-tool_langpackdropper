@@ -4,6 +4,10 @@ moodle-tool_langpackdropper
 Changes
 -------
 
+### Unreleased
+
+* 2025-03-22 - Prepare compatibility for Moodle 4.4.
+
 ### v4.3-r1
 
 * 2025-03-21 - Prepare compatibility for Moodle 4.3.
