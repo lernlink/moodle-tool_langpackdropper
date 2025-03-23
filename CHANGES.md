@@ -4,6 +4,10 @@ moodle-tool_langpackdropper
 Changes
 -------
 
+### Unreleased
+
+* 2025-03-21 - Prepare compatibility for Moodle 4.3.
+
 ### v4.1-r1
 
 * 2025-03-20 - Upgrade: Fix Behat tests which broke on 4.1.
