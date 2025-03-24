@@ -4,6 +4,10 @@ moodle-tool_langpackdropper
 Changes
 -------
 
+### Unreleased
+
+* 2025-03-24 - Bugfix: Change master to main in language pack.
+
 ### v4.4-r1
 
 * 2025-03-22 - Improvement: Show the "The language pack URLs were updated." notification only if needed, resolves #2.
