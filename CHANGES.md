@@ -4,7 +4,7 @@ moodle-tool_langpackdropper
 Changes
 -------
 
-### Unreleased
+### v4.4-r2
 
 * 2025-03-24 - Bugfix: Change master to main in language pack.
 
