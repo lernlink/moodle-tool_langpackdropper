@@ -37,7 +37,7 @@ $string['setting_langpackurls'] = 'Language pack URLs';
 $string['setting_langpackurls_desc'] = 'This setting expects a list of language packs to be used on this Moodle installation.
 Each line contains one language pack. The line consists of the language pack identifier and a URL where the language pack can be downloaded. Both values are separated by a pipe.<br/><br/>
 For example:<br/>
-de_mysublangpack|https://github.com/lernlink/moodle-tool_langpackdropper/raw/master/tests/fixtures/de_droppertest_toplevel.zip
+de_mysublangpack|https://github.com/lernlink/moodle-tool_langpackdropper/raw/main/tests/fixtures/de_droppertest_toplevel.zip
 <br/><br/>
 Further information to the parameters:
 <ul>
