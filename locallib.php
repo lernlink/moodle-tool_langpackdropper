@@ -50,46 +50,44 @@ function tool_langpackdropper_handle_langpacks() {
 
     // If we have at least one language pack.
     if (count($urls) > 0) {
-
         // Iterate over the language packs.
         foreach ($urls as $name => $url) {
-
             // Echo status.
-            mtrace ('Handling the \''.$name.'\' language pack from '.$url.' ...');
+            mtrace('Handling the \'' . $name . '\' language pack from ' . $url . ' ...');
 
             // Handle this language pack.
             $result = tool_langpackdropper_handle_langpack_from_url($name, $url);
 
             // If we haven't got a proper return value.
             if ($result === null) {
-                mtrace ('... FAILED: The file downloader function returned null which is unexpected.');
+                mtrace('... FAILED: The file downloader function returned null which is unexpected.');
                 continue;
             }
             // Output status message and flip return value if any language pack failed.
-            switch($result) {
+            switch ($result) {
                 case TOOL_LANGPACKDROPPER_LANGPACK_UNEXPECTEDSTRUCTURE:
-                    mtrace ('... FATAL: The downloaded file has an unexpected directory structure.');
+                    mtrace('... FATAL: The downloaded file has an unexpected directory structure.');
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_NOZIPFILE:
-                    mtrace ('... FATAL: The downloaded file was not recognized as ZIP file.');
+                    mtrace('... FATAL: The downloaded file was not recognized as ZIP file.');
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_EXTRACTFAILED:
-                    mtrace ('... FAILED: The downloaded file could not be extracted.');
+                    mtrace('... FAILED: The downloaded file could not be extracted.');
                     $retvalue = false; // Flip the return value.
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_NOTWRITABLE:
-                    mtrace ('... FAILED: The target path on disk is not writable.');
+                    mtrace('... FAILED: The target path on disk is not writable.');
                     $retvalue = false; // Flip the return value.
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_CURLERROR:
-                    mtrace ('... FAILED: A cURL error happened while downloading the file.');
+                    mtrace('... FAILED: A cURL error happened while downloading the file.');
                     $retvalue = false; // Flip the return value.
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_UPTODATE:
-                    mtrace ('... SUCCESS: The language pack is up to date.');
+                    mtrace('... SUCCESS: The language pack is up to date.');
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_INSTALLED:
-                    mtrace ('... SUCCESS: The language pack was installed.');
+                    mtrace('... SUCCESS: The language pack was installed.');
                     $logevent = \tool_langpackdropper\event\langpack_installed::create([
                         'context' => context_system::instance(),
                         'other' => [
@@ -100,7 +98,7 @@ function tool_langpackdropper_handle_langpacks() {
                     $logevent->trigger();
                     break;
                 case TOOL_LANGPACKDROPPER_LANGPACK_UPDATED:
-                    mtrace ('... SUCCESS: The language pack was updated.');
+                    mtrace('... SUCCESS: The language pack was updated.');
                     $logevent = \tool_langpackdropper\event\langpack_updated::create([
                         'context' => context_system::instance(),
                         'other' => [
@@ -142,7 +140,6 @@ function tool_langpackdropper_parse_langpack_urls() {
 
     // Iterate over the lines.
     foreach ($lines as $line) {
-
         // Trim the line, continue to next line if it is empty afterwards.
         $line = trim($line);
         if (strlen($line) == 0) {
@@ -207,7 +204,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
 
     // Compose download parameters.
     $dldirectory = make_request_directory('tool_langpackdropper');
-    $dlpath = $dldirectory.'/'.$name.'.zip';
+    $dlpath = $dldirectory . '/' . $name . '.zip';
     $timeout = get_config('downloadtimeout', 'tool_langpackdropper');
 
     // Download langpack.
@@ -275,7 +272,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
         // Iterate over all files in the ZIP.
         foreach ($zipfiles as $zf) {
             // If we have found the langconfig.php file at the second level.
-            if ($zf->pathname == $subdirname.'langconfig.php' && $zf->is_directory == false) {
+            if ($zf->pathname == $subdirname . 'langconfig.php' && $zf->is_directory == false) {
                 $langconfigatsecondlevel = true;
                 break;
             }
@@ -299,7 +296,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
     }
 
     // Compose target path.
-    $targetpath = $CFG->langotherroot.'/'.$name;
+    $targetpath = $CFG->langotherroot . '/' . $name;
 
     // Detect if a language pack is already installed at the target path.
     if (is_dir($targetpath)) {
@@ -316,7 +313,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
 
     // Compose extract parameters.
     $tempextractdirectory = make_request_directory('tool_langpackdropper');
-    $tempextractpath = $tempextractdirectory.'/'.$name;
+    $tempextractpath = $tempextractdirectory . '/' . $name;
 
     // Extract ZIP file directly to the temp extract location.
     $tempextractresult = $zippacker->extract_to_pathname($dlpath, $tempextractpath);
@@ -333,7 +330,7 @@ function tool_langpackdropper_handle_langpack_from_url($name, $url) {
 
         // Otherwise, if the language pack files are in a subdirectory.
     } else {
-        $extractedlangpackpath = $tempextractpath.'/'.$subdirname;
+        $extractedlangpackpath = $tempextractpath . '/' . $subdirname;
     }
 
     // If the language pack is not yet installed.
