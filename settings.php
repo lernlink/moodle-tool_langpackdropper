@@ -34,24 +34,33 @@ if ($hassiteconfig) {
         require_once($CFG->dirroot . '/admin/tool/langpackdropper/locallib.php');
 
         // Create language pack dropper static widget.
-        $setting = new admin_setting_heading('tool_langpackdropper/langpackdropperstatic',
-                '',
-                get_string('setting_langpackdropperstatic_desc', 'tool_langpackdropper', null, true));
+        $setting = new admin_setting_heading(
+            'tool_langpackdropper/langpackdropperstatic',
+            '',
+            get_string('setting_langpackdropperstatic_desc', 'tool_langpackdropper', null, true)
+        );
         $settings->add($setting);
 
         // Create language pack urls widget.
         $manageurl = new \core\url('/admin/tool/langimport/index.php');
-        $setting = new admin_setting_configtextarea('tool_langpackdropper/langpackurls',
-                get_string('setting_langpackurls', 'tool_langpackdropper', null, true),
-                get_string('setting_langpackurls_desc', 'tool_langpackdropper', ['managepage' => $manageurl->out()], true),
-                        '', PARAM_RAW);
+        $setting = new admin_setting_configtextarea(
+            'tool_langpackdropper/langpackurls',
+            get_string('setting_langpackurls', 'tool_langpackdropper', null, true),
+            get_string('setting_langpackurls_desc', 'tool_langpackdropper', ['managepage' => $manageurl->out()], true),
+            '',
+            PARAM_RAW
+        );
         $setting->set_updatedcallback('tool_langpackdropper_updatecallback');
         $settings->add($setting);
 
         // Create language pack timeout widget.
-        $setting = new admin_setting_configtext('tool_langpackdropper/downloadtimeout',
-                get_string('setting_downloadtimeout', 'tool_langpackdropper', null, true),
-                get_string('setting_downloadtimeout_desc', 'tool_langpackdropper', null, true), 10, PARAM_INT);
+        $setting = new admin_setting_configtext(
+            'tool_langpackdropper/downloadtimeout',
+            get_string('setting_downloadtimeout', 'tool_langpackdropper', null, true),
+            get_string('setting_downloadtimeout_desc', 'tool_langpackdropper', null, true),
+            10,
+            PARAM_INT
+        );
         $settings->add($setting);
     }
 
